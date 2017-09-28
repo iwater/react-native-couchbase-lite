@@ -6,7 +6,12 @@
 //  Copyright © 2015 Couchbase. All rights reserved.
 //
 
-#import <RCTBridgeModule.h>
+#if __has_include(<React/RCTBridgeModule.h>)
+#import <React/RCTBridgeModule.h>
+#else
+#import "RCTBridgeModule.h"
+#endif
+// #import <React/RCTBridgeModule.h>
 #import <CouchbaseLiteListener/CBLListener.h>
 #import <CouchbaseLite/CouchbaseLite.h>
 
